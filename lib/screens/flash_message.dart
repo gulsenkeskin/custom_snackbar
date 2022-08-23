@@ -26,8 +26,21 @@ class _FlashMessageScreenState extends State<FlashMessageScreen> {
                     color: Color(0xFFC72C41),
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
-                  child: const Text(
-                      "Bu email adresi kullanılıyor. Lütfen tekrar deneyin"),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text(
+                        "Mesaj mesaj!",
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                      Text(
+                        "Bu email adresi kullanılıyor. Lütfen tekrar deneyin",
+                        style: TextStyle(color: Colors.white, fontSize: 12),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      )
+                    ],
+                  ),
                 )));
           },
           child: const Text("Mesaj Göster"),
