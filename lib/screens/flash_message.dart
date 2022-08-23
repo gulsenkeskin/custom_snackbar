@@ -15,7 +15,18 @@ class _FlashMessageScreenState extends State<FlashMessageScreen> {
         child: ElevatedButton(
           onPressed: (){
             ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text("Bu email adresi kullanılıyor. Lütfen tekrar deneyin"))
+               SnackBar(
+                  behavior:  SnackBarBehavior.floating,//ekranla snackbar arasına margin ekler
+                  content: Container(
+                    padding: const EdgeInsets.all(16),
+                    height: 90,
+                    decoration: const BoxDecoration(
+                      color: Color(0xFFC72C41),
+                      borderRadius: BorderRadius.all(Radius.circular(20)),
+                    ),
+                    child:const Text("Bu email adresi kullanılıyor. Lütfen tekrar deneyin"),
+                  )
+              )
             );
           },
           child: const Text("Mesaj Göster"),
