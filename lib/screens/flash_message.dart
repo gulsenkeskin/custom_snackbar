@@ -13,7 +13,11 @@ class _FlashMessageScreenState extends State<FlashMessageScreen> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed: (){},
+          onPressed: (){
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text("Bu email adresi kullanılıyor. Lütfen tekrar deneyin"))
+            );
+          },
           child: const Text("Mesaj Göster"),
         ),
       ),
