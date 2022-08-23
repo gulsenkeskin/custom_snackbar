@@ -72,7 +72,7 @@ class CustomSnackBar extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 SvgPicture.asset(
-                  "assets/icons/chat.svg",
+                  "assets/icons/chat3.svg",
                   height: 40,
                   color: const Color(0xFFB01336),
                 ),
