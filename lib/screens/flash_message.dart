@@ -10,8 +10,13 @@ class FlashMessageScreen extends StatefulWidget {
 class _FlashMessageScreenState extends State<FlashMessageScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: (){},
+          child: const Text("Mesaj Göster"),
+        ),
+      ),
     );
   }
 }
